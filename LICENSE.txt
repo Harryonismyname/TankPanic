@@ -1,0 +1,12 @@
+Copyright © 2025 Benjamin Lance. All rights reserved.
+
+This repository is provided for portfolio and educational purposes only. You are permitted to view the source code but may not:
+- Copy, modify, or distribute any part of this project.
+- Use the code, models, or assets in any commercial or personal projects.
+- Reverse-engineer, decompile, or otherwise attempt to extract the source for reuse.
+
+All assets (models, images, sounds, etc.) are the property of their respective creators and are not licensed for use outside of this repository.
+
+If you have any questions or need special permission, please contact benjamindlance@gmail.com.
+
+By accessing this repository, you agree to these terms.
