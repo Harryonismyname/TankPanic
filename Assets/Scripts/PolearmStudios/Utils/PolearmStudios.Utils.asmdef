@@ -1,0 +1,16 @@
+{
+    "name": "PolearmStudios.Utils",
+    "rootNamespace": "",
+    "references": [
+        "GUID:76c891b49de73c14e8d22af3139472b1"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
