@@ -50,7 +50,7 @@ namespace PolearmStudios.Input
         public bool Locked { get; private set; }
 
 
-        readonly string MOUSE_AND_KEYBOARD_BINDING = "DefaultPC";
+        readonly string MOUSE_AND_KEYBOARD_BINDING = "Keyboard&Mouse";
         readonly string CONTROLLER_BINDING = "ControllerInput";
 
 
@@ -153,8 +153,8 @@ namespace PolearmStudios.Input
     
         private void SubscribeToEvents()
         {
-            rightTrigger.performed += RightTriggerPull;
-            rightTrigger.canceled += ReleaseRightTrigger;
+            //rightTrigger.performed += RightTriggerPull;
+            //rightTrigger.canceled += ReleaseRightTrigger;
 
             leftTrigger.performed += LeftTriggerPull;
             leftTrigger.canceled += ReleaseLeftTrigger;
@@ -175,8 +175,8 @@ namespace PolearmStudios.Input
         private void UnsubscribeToEvents()
         {
             //GameManager.OnStateChange -= HandleState;
-            rightTrigger.performed -= RightTriggerPull;
-            rightTrigger.canceled -= ReleaseRightTrigger;
+            //rightTrigger.performed -= RightTriggerPull;
+            //rightTrigger.canceled -= ReleaseRightTrigger;
             leftTrigger.performed -= LeftTriggerPull;
             leftTrigger.canceled -= ReleaseLeftTrigger;
             jump.performed -= Action1Start;
@@ -192,10 +192,10 @@ namespace PolearmStudios.Input
 
         private void CacheActions()
         {
-            moveInput = input.actions["Walk"];
+            moveInput = input.actions["Move"];
             aimInput = input.actions["Look"];
-            rightTrigger = input.actions["RightHand"];
-            leftTrigger = input.actions["LeftHand"];
+            //rightTrigger = input.actions["RightHand"];
+            leftTrigger = input.actions["Attack"];
             //select = input.actions["Cheat"];
             //start = input.actions["PauseGame"];
             jump = input.actions["Jump"];
