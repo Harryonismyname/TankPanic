@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     {
         inputManager = GetComponent<InputManager>();
         inputManager.OnAim += Aim;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Aim(Vector2 input)
