@@ -77,6 +77,7 @@ public class Sequence : MonoBehaviour
         {
             step.Lock();
         }
+        currentIndex = 0;
     }
 
     public void StartSequence()

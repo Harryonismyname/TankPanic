@@ -2,15 +2,43 @@ using UnityEngine;
 
 public class SequenceManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] Sequence[] Sequences;
+    private int currentIndex;
+    private void Awake() => Initialize();
+    private void OnDestroy()
     {
-        
+        foreach (var sequence in Sequences)
+        {
+            sequence.OnSequenceComplete -= Advance;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        foreach (var sequence in Sequences)
+        {
+            sequence.EndSequence();
+        }
+        StartCurrentSequence();
     }
+
+    private void Initialize()
+    {
+        foreach (var sequence in Sequences)
+        {
+            sequence.OnSequenceComplete += Advance;
+        }
+        currentIndex = 0;
+    }
+
+    private void Advance()
+    {
+        EndCurrentSequence();
+        currentIndex++;
+        if (currentIndex >= Sequences.Length) currentIndex = 0;
+        StartCurrentSequence();
+    }
+
+    private void StartCurrentSequence() => Sequences[currentIndex].StartSequence();
+    private void EndCurrentSequence() => Sequences[currentIndex].EndSequence();
 }
